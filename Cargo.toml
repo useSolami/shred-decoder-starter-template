@@ -1,0 +1,15 @@
+[package]
+name = "shred-decoder-starter-template"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["net", "rt", "macros", "signal"] }
+solana-sdk = "3"
+solana-stream-sdk = "1.2"
+log = "0.4"
+env_logger = "0.11"
+
+[profile.release]
+opt-level = 3
+lto = true
